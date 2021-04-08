@@ -70,8 +70,8 @@ This is the development package for %{name}.
 %{_includedir}/*
 %{_libdir}/lib*.so
 %{_libdir}/pkgconfig/*.pc
-%dir %{_libdir}/%{name}-%{api}/
-%dir %{_libdir}/%{name}-%{api}/include/
-%{_libdir}/%{name}-%{api}/include/*.h
-%doc %{_datadir}/devhelp/books/%{name}-%{api}/
+%dir %{_libdir}/%{pkgname}-%{api}/
+%dir %{_libdir}/%{pkgname}-%{api}/include/
+%{_libdir}/%{pkgname}-%{api}/include/*.h
+%doc %{_datadir}/devhelp/books/%{pkgname}-%{api}/
 
