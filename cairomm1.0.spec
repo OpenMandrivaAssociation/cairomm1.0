@@ -1,17 +1,18 @@
+%define pkgname		cairomm
 %define api 1.0
 %define major 1
-%define libname	%mklibname %{name} %{api} %{major}
-%define devname	%mklibname -d %{name} %{api}
+%define libname	%mklibname %{pkgname} %{api} %{major}
+%define devname	%mklibname -d %{pkgname} %{api}
 %define _disable_rebuild_configure 1
 
 Summary:	C++ API for the cairo multi-platform 2D graphics library
-Name:		cairomm
+Name:		cairomm%{api}
 Version:	1.12.2
-Release:	4
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://cairographics.org/cairomm
-Source0:	http://cairographics.org/releases/%{name}-%{version}.tar.gz
+Source0:	http://cairographics.org/releases/%{pkgname}-%{version}.tar.gz
 
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(cairo)
@@ -45,13 +46,13 @@ Extension.
 Summary:	Development files for Cairomm library
 Group:		Development/C++
 Requires:	%{libname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
+Provides:	%{pkgname}-devel = %{version}-%{release}
 
 %description -n %{devname}
 This is the development package for %{name}.
 
 %prep
-%setup -q
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %configure
