@@ -8,7 +8,7 @@
 Summary:	C++ API for the cairo multi-platform 2D graphics library
 Name:		cairomm%{api}
 Version:	1.12.2
-Release:	14
+Release:	15
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://cairographics.org/cairomm
