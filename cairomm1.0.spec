@@ -14,6 +14,11 @@ Group:		System/Libraries
 Url:		https://cairographics.org/cairomm
 Source0:	https://cairographics.org/releases/%{pkgname}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(sigc++-2.0)
